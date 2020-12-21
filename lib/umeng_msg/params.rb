@@ -33,9 +33,17 @@ module UmengMsg
             'category'          => options['category']
           },
           'title' => options['title'],
-          'extra' => options['extra'] || {}
+          'extra' => options['extra'] || {},          
         }
       }
+
+      if(options['screen'].present?)
+        ios_payload['payload'].merge!({'screen' => options['screen']})
+      end
+      if options['params'].present?
+        ios_payload['payload'].merge!({'params' => options['params']})
+      end
+    
       android_payload = {
         'payload' => {
           'display_type' => options['display_type'],
