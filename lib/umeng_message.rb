@@ -1,11 +1,11 @@
 # coding: utf-8
-require "umeng_msg/version"
-require "umeng_msg/configuration"
-require 'umeng_msg/params'
-require 'umeng_msg/sign'
-require "umeng_msg/subject"
+require "umeng_message/version"
+require "umeng_message/configuration"
+require 'umeng_message/params'
+require 'umeng_message/sign'
+require "umeng_message/subject"
 
-module UmengMsg
+module UmengMessage
 
   def self.configuration
     @configuration ||= Configuration.new

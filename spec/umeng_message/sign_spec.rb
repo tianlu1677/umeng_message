@@ -1,8 +1,8 @@
 require 'spec_helper'
-module UmengMsg
+module UmengMessage
   describe Sign do
     let(:sign) do
-      UmengMsg::Sign.generate('ios', UmengMsg::Subject::PUSH_URL, {type: 'boardcast'})
+      UmengMessage::Sign.generate('ios', UmengMessage::Subject::PUSH_URL, {type: 'boardcast'})
     end
     it 'generate a sign' do
       expect(sign).to eq '39c427075b808ec33cb7a9f5294879f6'

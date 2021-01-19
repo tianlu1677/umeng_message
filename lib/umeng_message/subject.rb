@@ -1,7 +1,7 @@
 # coding: utf-8
 require 'httpi'
 
-module UmengMsg
+module UmengMessage
   class Subject
     attr_reader :payload, :ret, :task_id, :error_code, :file_id, :platform, :content
     CAST_TYPE  = %w|unicast listcast filecast broadcast groupcast customizedcast|

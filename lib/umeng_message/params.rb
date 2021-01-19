@@ -1,11 +1,11 @@
 # coding: utf-8
-module UmengMsg
+module UmengMessage
   module Params
     extend self
 
     def push_params(platform, options)
       params = {
-        'appkey'          => UmengMsg.appkey(platform),
+        'appkey'          => UmengMessage.appkey(platform),
         'timestamp'       => Time.now.to_i.to_s,
         'type'            => options['type'],
         'device_tokens'   => options['device_tokens'],
@@ -17,7 +17,7 @@ module UmengMsg
                                'expire_time'  => options['expire_time'],
                                'max_send_num' => options['max_send_num'],
                              },
-        'production_mode' => UmengMsg.production_mode,
+        'production_mode' => UmengMessage.production_mode,
         'description'     => options['description'],
         'thirdparty_id'   => options['thirdparty_id']
       }
@@ -88,14 +88,14 @@ module UmengMsg
 
     def check_params(platform, task_id)
       {
-        'appkey'    => UmengMsg.appkey(platform),
+        'appkey'    => UmengMessage.appkey(platform),
         'timestamp' => Time.now.to_i.to_s,
         'task_id'   => task_id
       }
     end
     def cancel_params(platform, task_id)
       {
-        'appkey'    => UmengMsg.appkey(platform),
+        'appkey'    => UmengMessage.appkey(platform),
         'timestamp' => Time.now.to_i.to_s,
         'task_id'   => task_id
       }
@@ -103,7 +103,7 @@ module UmengMsg
 
     def upload_params(platform, content)
       {
-        'appkey'    => UmengMsg.appkey(platform),
+        'appkey'    => UmengMessage.appkey(platform),
         'timestamp' => Time.now.to_i.to_s,
         'content'   => content
       }

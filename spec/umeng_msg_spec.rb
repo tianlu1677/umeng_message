@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe UmengMsg do
+describe UmengMessage do
   it 'has a version number' do
-    expect(UmengMsg::VERSION).not_to be nil
+    expect(UmengMessage::VERSION).not_to be nil
   end
 
   describe '#configure' do
-    let(:default_config) { UmengMsg.reset }
-    let(:config) { UmengMsg.configuration }
+    let(:default_config) { UmengMessage.reset }
+    let(:config) { UmengMessage.configuration }
     it 'has a default config' do
       expect(default_config.ios_appkey).to eq 'ios_appkey'
     end
@@ -18,7 +18,7 @@ describe UmengMsg do
 
     describe 'change configuration' do
       before :each do
-        UmengMsg.configure do |config|
+        UmengMessage.configure do |config|
           config.ios_appkey = 'new_ios_appkey'
           config.android_appkey = 'new_android_appkey'
           config.ios_app_master_secret = 'new_ios_secret'

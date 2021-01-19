@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module UmengMsg
+module UmengMessage
   describe Configuration do
     describe 'default config' do
       let(:default) {Configuration.new}

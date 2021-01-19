@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module UmengMsg
+module UmengMessage
   describe Subject do
     let(:subject) {Subject.new('ios', type: 'unicast', device_tokens: 'xxx', alert: 'hello')}
     describe '#push' do

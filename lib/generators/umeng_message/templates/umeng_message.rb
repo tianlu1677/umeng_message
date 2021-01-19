@@ -1,5 +1,5 @@
 if Rails.env.production?
-  UmengMsg.configure do |config|
+  UmengMessage.configure do |config|
     config.ios_appkey = 'ios_appkey'
     config.ios_app_master_secret = 'ios_app_master_secret'
     config.android_appkey = 'android_appkey'
@@ -7,7 +7,7 @@ if Rails.env.production?
     config.production_mode = 'true'
   end
 else
-  UmengMsg.configure do |config|
+  UmengMessage.configure do |config|
     config.ios_appkey = 'ios_appkey'
     config.ios_app_master_secret = 'ios_app_master_secret'
     config.android_appkey = 'android_appkey'

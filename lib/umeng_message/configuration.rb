@@ -1,5 +1,5 @@
 # coding: utf-8
-module UmengMsg
+module UmengMessage
   class Configuration
     attr_accessor :ios_appkey, :ios_app_master_secret, :android_appkey, :android_app_master_secret, :production_mode
 
