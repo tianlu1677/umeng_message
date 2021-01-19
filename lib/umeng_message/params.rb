@@ -37,10 +37,10 @@ module UmengMessage
         }
       }
 
-      if(options['screen'].present?)
+      if options['screen']
         ios_payload['payload'].merge!({'screen' => options['screen']})
       end
-      if options['params'].present?
+      if options['params']
         ios_payload['payload'].merge!({'params' => options['params']})
       end
     
