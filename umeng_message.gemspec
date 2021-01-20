@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.licenses       = ['MIT']
   spec.summary       = 'The encapsulation of umeng message!'
   spec.description   = '友盟推送Ruby封装'
-  spec.homepage      = 'https://github.com/hzlu/umeng_message'
+  spec.homepage      = 'https://github.com/tianlu1677/umeng_message'
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }

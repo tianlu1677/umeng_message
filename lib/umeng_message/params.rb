@@ -112,8 +112,12 @@ module UmengMessage
     private
     #取出nil的key 不然友盟解析json出错
     def compact_params(params)
-      custom_compact = Proc.new { |k, v| v.delete_if(&custom_compact) if v.kind_of?(Hash);  v.blank? }
+      custom_compact = Proc.new { |k, v| v.delete_if(&custom_compact) if v.kind_of?(Hash);  is_blank?(v) }
       params.delete_if &custom_compact
+    end
+
+    def is_blank?(value)
+      value.nil? || value.length <= 0
     end
   end
 end
